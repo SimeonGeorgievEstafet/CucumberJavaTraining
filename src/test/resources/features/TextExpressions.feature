@@ -77,8 +77,8 @@ Feature: Text Expressions functionality
           Excepteur sint  occaecat cupidatat non  proident, sunt in culpa qui officia deserunt mollit anim id est laborum !
       """
       Given I get the word (or the char) count
-      Then verify the word count is equal to 70
-      Then verify the char count is equal to 251
+      Then verify the word count is equal to 114
+      Then verify the char count is equal to 496
 
 
     Scenario: Remove double white spaces

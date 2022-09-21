@@ -5,6 +5,7 @@ import io.cucumber.java.ParameterType;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.jupiter.api.Assertions;
 
 import java.util.Objects;
 
@@ -44,13 +45,8 @@ public class TextExpressionSteps {
 
     @Then("I verify words are equal")
     public void iVerifyWordsAreEqual() {
-        result = StringHelper.areWordsEqual(word1, word2, isCaseSensitive);
-        //Assert
-        if (result) {
-            System.out.println("Words are Equal");
-        } else {
-            System.out.println("Words are not Equal");
-        }
+        System.out.println((StringHelper.areSentencesEqual(word1, word2, isCaseSensitive) ? "Words are Equal" : "Words are not Equal"));
+
     }
 
     @Given("The first sentence is {string}")
@@ -91,21 +87,12 @@ public class TextExpressionSteps {
 
     @Then("verify the word count is equal to {int}")
     public void verifyTheCountIsEqualTo(int wordCount) {
-        if (this.wordCount == wordCount) {
-            System.out.println("Word count is correct");
-        } else {
-            System.out.println("Word count is not correct");
-        }
+        Assertions.assertEquals(this.wordCount, wordCount);
     }
 
     @Then("verify the char count is equal to {int}")
     public void verifyTheCharCountIsEqualTo(int charCount) {
-        if (this.charCount == charCount) {
-            System.out.println("Char count is correct");
-        } else {
-            System.out.println("Char count is not correct");
-        }
-
+        Assertions.assertEquals(this.charCount, charCount);
     }
 
     @When("Remove letter {string}")

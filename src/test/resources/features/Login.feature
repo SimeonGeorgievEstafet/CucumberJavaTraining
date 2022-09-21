@@ -1,6 +1,6 @@
 Feature: Login functionality
 
-  Rule: Verify Sentences with case sensitivity
+  Rule: Login with Background feature
     Background:
       * open Login page.
 

@@ -45,6 +45,7 @@ public class TextExpressionSteps {
     @Then("I verify words are equal")
     public void iVerifyWordsAreEqual() {
         result = StringHelper.areWordsEqual(word1, word2, isCaseSensitive);
+        //Assert
         if (result) {
             System.out.println("Words are Equal");
         } else {
@@ -69,6 +70,7 @@ public class TextExpressionSteps {
     }
 
     @Given("I pass the following first text: {string}")
+    @Given("I pass the following first text:")
     public void iPassTheFollowingFirstText(String text) {
         this.firstText = text;
     }
@@ -81,6 +83,7 @@ public class TextExpressionSteps {
     @Given("I get the word \\(or the char) count")
     public void iGetTheWordOrTheCharCount() {
         wordCount = StringHelper.getWordsCountFromText(firstText);
+        System.out.println(firstText);
         System.out.println("Word count is: " + wordCount);
         charCount = StringHelper.getCharsCount(firstText);
         System.out.println("Char count is: " + charCount);
@@ -147,4 +150,6 @@ public class TextExpressionSteps {
         System.out.println(firstText);
 
     }
+
+
 }

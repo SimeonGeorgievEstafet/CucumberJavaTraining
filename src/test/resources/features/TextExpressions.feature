@@ -7,7 +7,7 @@ Feature: Text Expressions functionality
 
     Scenario: Verify equal words 1
       Given The first word is Cucumber
-      Given The second word is cucumber
+      And The second word is cucumber
       Then I verify words are equal
 
 
@@ -17,7 +17,7 @@ Feature: Text Expressions functionality
 
     Scenario: Verify equal words 2
       Given The first word is Cucumber
-      Given The second word is cucumber
+      And The second word is cucumber
       Then I verify words are equal
 
 
@@ -27,9 +27,9 @@ Feature: Text Expressions functionality
 
     Scenario: Remove letters with RegEx
       Given The first word is Cucumberss11
-      Given The second word is cucumbers
+      And The second word is cucumbers
       When Remove letter "s"
-      When Remove letter "1"
+      And Remove letter "1"
       Then I verify words are equal
 
 
@@ -40,7 +40,7 @@ Feature: Text Expressions functionality
 
     Scenario: Verify equal Sentences
       Given The first sentence is "I set the first sentence to Cucumber is amazing!"
-      Given The second sentence is "I set the second sentence to cucumber is amazing!"
+      And The second sentence is "I set the second sentence to cucumber is amazing!"
       Then I verify sentences are equal
 
     Scenario: Verify equal Sentences 2
@@ -67,7 +67,15 @@ Feature: Text Expressions functionality
       Given set Case sensitive true
 
     Scenario: Verify char and word count
-      Given I pass the following first text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est  laborum."
+      Given I pass the following first text:
+     """
+          Lorem ipsum dolor sit amet  ,   consectetur adipiscing elit  , sed do    eiusmod tempor incididunt ut labore et    dolore magna aliqua .
+          Ut enim ad minim veniam ? Quis nostrud exercitation  ullamco laboris nisi ut aliquip ex ea commodo consequat .
+
+
+          Duis aute irure dolor in reprehenderit in  voluptate  -  velit esse   cillum   dolore eu fugiat nulla pariatur ?
+          Excepteur sint  occaecat cupidatat non  proident, sunt in culpa qui officia deserunt mollit anim id est laborum !
+      """
       Given I get the word (or the char) count
       Then verify the word count is equal to 70
       Then verify the char count is equal to 251

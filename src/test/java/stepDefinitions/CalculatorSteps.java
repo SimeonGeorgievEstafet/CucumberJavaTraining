@@ -60,6 +60,7 @@ public class CalculatorSteps {
 
     @Given("sum up all the numbers in column 1 and 2$")
     public void sumUpAllTheNumbersInColumnAnd(DataTable table) {
+//        for()...
         input1 = calculator.calculate(Integer.parseInt(table.column(0).get(1)), Integer.parseInt(table.column(0).get(2)));
         input2 = calculator.calculate(Integer.parseInt(table.column(1).get(1)), Integer.parseInt(table.column(1).get(2)));
     }

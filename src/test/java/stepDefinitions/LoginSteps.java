@@ -1,8 +1,6 @@
 package stepDefinitions;
 
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import io.cucumber.java.en.*;
 
 public class LoginSteps {
     @Given("open Login page.")
@@ -10,12 +8,15 @@ public class LoginSteps {
         System.out.println("You are at Login page");
     }
 
-    @When("^I enter Username as \"([^\"]*)\" and Password as \"([^\"]*)\"$")
-    public void enterUsernameAndPassword(String arg1, String arg2) {
-        System.out.println(arg1);
-        System.out.println(arg2);
+    @When("^I enter Username as \"([^\"]*)\"$")
+    public void enterUsername(String username) {
+        System.out.println(username);
     }
 
+    @And("^I enter Password as \"([^\"]*)\"$")
+    public void enterPassword(String password) {
+        System.out.println(password);
+    }
     @Then("print success message")
     public void printSuccessMessage() {
         System.out.println("Success message!");
@@ -25,6 +26,12 @@ public class LoginSteps {
     @Then("print Error message")
     public void printErrorMessage() {
         System.out.println("Error message!");
+    }
+
+    @But("print some other message")
+    public void printSomeOtherMessage() {
+        System.out.println("Other message!");
         System.out.println(" ");
     }
+
 }

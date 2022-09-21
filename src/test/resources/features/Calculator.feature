@@ -8,12 +8,12 @@ Feature: Calculator
 
     Scenario: Sum Integers
       Given set first int to 3
-      Given set second int to 5
+      And set second int to 5
       Then verify int result is: 8
 
     Scenario: Sum Decimals
       Given set first variable to 1.2
-      Given set second variable to 3.0
+      And set second variable to 3.0
       Then verify result is: 5.2
 
 
@@ -23,12 +23,12 @@ Feature: Calculator
 
     Scenario: Difference Integers
       Given set first int to 10
-      Given set second int to 6
+      And set second int to 6
       Then verify int result is: 4
 
     Scenario:Difference Decimals
       Given set first variable to 7.5
-      Given set second variable to 2.5
+      And set second variable to 2.5
       Then verify result is: 3.8
 
 

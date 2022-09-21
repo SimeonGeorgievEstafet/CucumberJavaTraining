@@ -17,6 +17,7 @@ public class LoginSteps {
     public void enterPassword(String password) {
         System.out.println(password);
     }
+
     @Then("print success message")
     public void printSuccessMessage() {
         System.out.println("Success message!");

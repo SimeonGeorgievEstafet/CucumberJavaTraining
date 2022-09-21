@@ -21,7 +21,8 @@ Feature: Login functionality
         | user_2@yahoo.com | SECRET123 |
         | user_3@abv.bg    | 0000000   |
 
-  Rule: Verify Sentences with case sensitivity
+
+  Rule: Verify Login without Background feature
 
     Scenario Outline: Login with different users empty Username/Password.
     """

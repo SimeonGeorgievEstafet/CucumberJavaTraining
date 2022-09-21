@@ -1,4 +1,4 @@
-Feature: Login2 functionality
+Feature: Login functionality
 
   Scenario Outline: Login with different users.
     Given open Login page.
@@ -9,6 +9,7 @@ Feature: Login2 functionality
       | user_1@gmail.com | 12345     |
       | user_2@yahoo.com | SECRET123 |
       | user_3@abv.bg    | 0000000   |
+
 
   Scenario Outline: Login with different users.
     Given open Login page.

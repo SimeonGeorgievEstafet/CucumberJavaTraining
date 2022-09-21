@@ -1,4 +1,4 @@
-Feature: Test Feature
+Feature: Hello world Feature
 
   Scenario: print "Hello World" in console!
 

@@ -66,8 +66,8 @@ Feature: Extending StringHelper tests with RegEx steps
     Background:
       Given input text
       """
-          Lorem ipsum dolor sit amet  ,   consectetur adipiscing elit  , sed do    eiusmod tempor incididunt ut labore et    dolore magna aliqua .
-          Ut enim ad minim veniam ? Quis nostrud exercitation  ullamco laboris nisi ut aliquip ex ea commodo consequat .
+          Lorem ipsum dolor sit amet  ,   consectetur adipiscing elit  , seddo    eiusmod tempor incididunt ut labore et    dolore magna aliqua .
+          Ut enim ad minim veni am ? Quis nostrud exercitation  ullamco laboris nisi ut aliquip ex ea commodo consequat .
 
 
           Duis aute irure dolor in reprehenderit in  voluptate  -  velit esse   cillum   dolore eu fugiat nulla pariatur ?
@@ -82,5 +82,5 @@ Feature: Extending StringHelper tests with RegEx steps
       And all whitespaces before ? are removed
       And all whitespaces before ! are removed
       And all consecutive whitespace chars are replaced with a single space
-      Then verify the input text word count is equal to 70
+      Then verify the input text word count is equal to 69
       And verify the input text char count is equal to 447

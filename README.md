@@ -1,8 +1,8 @@
 BDD and Cucumber Automation project
 
-Run HelloWorld.feature file to run simple Cucumber scenario.
+This is Cucumber training with 4 feature files. 
 
-All .feature files are in resources folder
-
-Steps are defined in HelloWorldSteps under stepDefinitions folder.
-
+HelloWorld.feature - with very basic scenario.
+Login.feature - Test for login form. 
+Calculator.feature - Calculator tests for adding and subtracting.
+RegularExpressions.feature - Feature file with many posible Character,Letter and Text manupipulation tests.
